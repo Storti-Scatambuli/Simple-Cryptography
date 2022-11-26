@@ -7,9 +7,9 @@ class Alphabets:
     
     def __init__(self):
         shuffle(self.alphabet)
-        
+        return self.alphabet
 
 
 if __name__ == '__main__':
     test = Alphabets()
-    print(test.alphabet)
+    print(test)
