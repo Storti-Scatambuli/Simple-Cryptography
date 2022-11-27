@@ -8,6 +8,13 @@ class Alphabets:
         
         self.alphabet = list(fr'''{string.printable}''')
 
+        
+
+        shuffle(self.alphabet)
+        
+    
+    def generate_key(self):
+        
         self.__alphabet_code = []
         
         self.__key_characters = list(fr'''{string.ascii_letters}{string.digits}{string.punctuation}''')
@@ -15,15 +22,12 @@ class Alphabets:
         for character in self.__key_characters:
             
             self.__alphabet_code.append(ord(character))
-
-        shuffle(self.alphabet)
-        
-        self.primary_key = choice(self.__alphabet_code)
+            
+            return choice(self.__alphabet_code)
         
     
 
 if __name__ == '__main__':
     test = Alphabets()
     print(test.alphabet)
-    print(test.primary_key)
-    print(chr(test.primary_key))
+    print(test.generate_key())
